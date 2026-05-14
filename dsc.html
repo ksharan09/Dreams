@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dreams Capture Studios | Basavakiran Biradar</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-pale: #FDF6E3;
+    --olive: #5C6B3A;
+    --olive-dark: #3A4525;
+    --olive-light: #8A9E5A;
+    --cream: #FEFAF4;
+    --warm-white: #FFF8EE;
+    --blush: #F5E6D3;
+    --rose: #D4956A;
+    --rose-dark: #A0623A;
+    --teal: #2D7D6F;
+    --teal-light: #4EADA0;
+    --navy: #1A2E4A;
+    --charcoal: #2C2C2C;
+    --text-muted: #7A6A55;
+    --lavender: #8B6DA8;
+    --lavender-light: #C4A8D8;
+    --sky: #5B9BD5;
+    --coral: #E8735A;
+    --mint: #52B788;
+    --shadow-gold: rgba(201,168,76,0.2);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--charcoal); overflow-x: hidden; }
+
+  /* ========== TOP BANNER ========== */
+  .top-banner {
+    background: linear-gradient(135deg, var(--olive-dark) 0%, var(--olive) 50%, var(--olive-dark) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 8px 20px;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  .top-banner span { color: var(--gold-light); font-weight: 500; }
+
+  /* ========== HEADER ========== */
+  header {
+    background: rgba(254,250,244,0.97);
+    backdrop-filter: blur(12px);
+    position: sticky; top: 0; z-index: 1000;
+    border-bottom: 1px solid rgba(201,168,76,0.25);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  }
+  .header-inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: 12px 30px;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    flex-wrap: wrap;
+  }
+  .studio-brand { display: flex; align-items: center; gap: 14px; }
+  .brand-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, var(--olive), var(--gold));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; color: white;
+    box-shadow: 0 4px 15px var(--shadow-gold);
+    flex-shrink: 0;
+  }
+  .brand-text .studio-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 700;
+    color: var(--olive-dark);
+    line-height: 1.1;
+  }
+  .brand-text .owner-name {
+    font-size: 12px; color: var(--text-muted);
+    letter-spacing: 0.5px; margin-top: 2px;
+  }
+  .header-contact {
+    display: flex; align-items: center; gap: 6px;
+    background: var(--gold-pale);
+    border: 1px solid var(--gold-light);
+    border-radius: 20px; padding: 6px 14px;
+    font-size: 13px; color: var(--olive-dark); font-weight: 500;
+    text-decoration: none; transition: all 0.3s;
+  }
+  .header-contact:hover { background: var(--gold); color: white; }
+
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a {
+    text-decoration: none; color: var(--charcoal);
+    font-size: 13.5px; font-weight: 500;
+    padding: 7px 14px; border-radius: 20px;
+    transition: all 0.25s; letter-spacing: 0.3px;
+  }
+  nav a:hover { background: var(--olive); color: white; }
+  nav a.cta-nav {
+    background: linear-gradient(135deg, var(--gold), var(--rose));
+    color: white; font-weight: 600;
+    box-shadow: 0 3px 12px var(--shadow-gold);
+  }
+  nav a.cta-nav:hover { transform: translateY(-1px); box-shadow: 0 5px 18px var(--shadow-gold); }
+
+  /* ========== HERO ========== */
+  .hero {
+    min-height: 100vh;
+    background:
+      linear-gradient(160deg, rgba(26,46,74,0.85) 0%, rgba(92,107,58,0.7) 50%, rgba(201,168,76,0.5) 100%),
+      url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 80px 20px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center bottom, rgba(201,168,76,0.15) 0%, transparent 70%);
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 750px; }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(201,168,76,0.2);
+    border: 1px solid rgba(201,168,76,0.6);
+    color: var(--gold-light);
+    padding: 6px 20px; border-radius: 30px;
+    font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 24px;
+    animation: fadeUp 0.8s ease both;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 700; color: white;
+    line-height: 1.1; margin-bottom: 10px;
+    animation: fadeUp 0.8s ease 0.15s both;
+  }
+  .hero h1 em { color: var(--gold-light); font-style: italic; }
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: rgba(255,255,255,0.85); font-weight: 300; font-style: italic;
+    margin-bottom: 24px;
+    animation: fadeUp 0.8s ease 0.3s both;
+  }
+  .hero-desc {
+    font-size: 15px; color: rgba(255,255,255,0.75);
+    line-height: 1.7; max-width: 560px; margin: 0 auto 36px;
+    animation: fadeUp 0.8s ease 0.45s both;
+  }
+  .hero-services {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+    margin-bottom: 40px;
+    animation: fadeUp 0.8s ease 0.6s both;
+  }
+  .service-pill {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white; padding: 6px 16px; border-radius: 20px;
+    font-size: 13px; backdrop-filter: blur(8px);
+    transition: all 0.3s;
+  }
+  .service-pill:hover { background: var(--gold); border-color: var(--gold); }
+  .hero-btns {
+    display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+    animation: fadeUp 0.8s ease 0.75s both;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold), #E8A840);
+    color: var(--olive-dark); font-weight: 700;
+    padding: 14px 34px; border-radius: 30px;
+    text-decoration: none; font-size: 14px;
+    box-shadow: 0 6px 25px rgba(201,168,76,0.4);
+    transition: all 0.3s; border: none; cursor: pointer;
+    display: inline-block;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 35px rgba(201,168,76,0.5); }
+  .btn-outline {
+    background: rgba(255,255,255,0.1);
+    color: white; border: 2px solid rgba(255,255,255,0.5);
+    padding: 14px 34px; border-radius: 30px;
+    text-decoration: none; font-size: 14px; font-weight: 500;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s; display: inline-block;
+  }
+  .btn-outline:hover { background: white; color: var(--olive-dark); }
+  .hero-scroll {
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+    color: rgba(255,255,255,0.6); font-size: 12px; letter-spacing: 2px;
+    text-transform: uppercase; display: flex; flex-direction: column; align-items: center; gap: 8px;
+    animation: bounce 2s infinite;
+  }
+  .scroll-arrow { font-size: 20px; }
+
+  /* ========== SECTION HEADER ========== */
+  .section-header { text-align: center; margin-bottom: 50px; }
+  .section-label {
+    display: inline-block;
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold); font-weight: 600; margin-bottom: 12px;
+    padding: 4px 16px; border-radius: 20px;
+    background: var(--gold-pale); border: 1px solid rgba(201,168,76,0.3);
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700;
+    color: var(--olive-dark); line-height: 1.2;
+  }
+  .section-title em { color: var(--gold); font-style: italic; }
+  .section-desc { font-size: 15px; color: var(--text-muted); margin-top: 14px; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .section-divider {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--rose));
+    border-radius: 2px; margin: 16px auto 0;
+  }
+
+  /* ========== SERVICES SECTION ========== */
+  .services { padding: 90px 20px; background: var(--warm-white); }
+  .services-grid {
+    max-width: 1150px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px;
+  }
+  .service-card {
+    background: white; border-radius: 20px;
+    padding: 32px 24px; text-align: center;
+    border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: all 0.35s; position: relative; overflow: hidden;
+  }
+  .service-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    transition: transform 0.3s;
+  }
+  .service-card.c1::before { background: linear-gradient(90deg, var(--lavender), var(--lavender-light)); }
+  .service-card.c2::before { background: linear-gradient(90deg, var(--teal), var(--teal-light)); }
+  .service-card.c3::before { background: linear-gradient(90deg, var(--sky), #87CEEB); }
+  .service-card.c4::before { background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
+  .service-card.c5::before { background: linear-gradient(90deg, var(--coral), #F4A07A); }
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 16px 45px rgba(0,0,0,0.1); }
+  .service-icon {
+    width: 64px; height: 64px; border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; margin: 0 auto 18px;
+  }
+  .service-card.c1 .service-icon { background: rgba(139,109,168,0.12); }
+  .service-card.c2 .service-icon { background: rgba(45,125,111,0.12); }
+  .service-card.c3 .service-icon { background: rgba(91,155,213,0.12); }
+  .service-card.c4 .service-icon { background: rgba(201,168,76,0.12); }
+  .service-card.c5 .service-icon { background: rgba(232,115,90,0.12); }
+  .service-card h3 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--olive-dark); margin-bottom: 10px; }
+  .service-card p { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; }
+
+  /* ========== GALLERY ========== */
+  #gallery { padding: 90px 20px; background: var(--olive-dark); }
+  #gallery .section-title { color: white; }
+  #gallery .section-label { background: rgba(201,168,76,0.15); color: var(--gold-light); border-color: rgba(201,168,76,0.3); }
+  #gallery .section-desc { color: rgba(255,255,255,0.65); }
+  .gallery-tabs {
+    display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+  .gallery-tab {
+    padding: 8px 20px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.7); font-size: 13px; cursor: pointer;
+    transition: all 0.3s; background: transparent; font-family: 'DM Sans', sans-serif;
+  }
+  .gallery-tab.active, .gallery-tab:hover {
+    background: var(--gold); color: var(--olive-dark);
+    border-color: var(--gold); font-weight: 600;
+  }
+  .gallery-grid {
+    max-width: 1150px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px;
+  }
+  .gallery-item {
+    border-radius: 14px; overflow: hidden;
+    position: relative; aspect-ratio: 4/5; cursor: pointer;
+    background: var(--navy);
+  }
+  .gallery-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .gallery-item:hover img { transform: scale(1.08); }
+  .gallery-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+    opacity: 0; transition: opacity 0.4s;
+    display: flex; align-items: flex-end; padding: 18px;
+  }
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+  .gallery-label { color: white; font-size: 13px; font-weight: 500; }
+  .gallery-category-tag {
+    background: var(--gold); color: var(--olive-dark);
+    font-size: 10px; font-weight: 700; padding: 3px 10px;
+    border-radius: 10px; text-transform: uppercase; letter-spacing: 0.5px;
+    margin-bottom: 6px; display: inline-block;
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none; position: fixed; inset: 0; z-index: 9999;
+    background: rgba(0,0,0,0.93); align-items: center; justify-content: center;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 10px; object-fit: contain; }
+  .lightbox-close {
+    position: absolute; top: 20px; right: 24px;
+    color: white; font-size: 34px; cursor: pointer; line-height: 1;
+    background: rgba(255,255,255,0.1); border: none;
+    width: 44px; height: 44px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: sans-serif;
+  }
+  .lightbox-prev, .lightbox-next {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    color: white; font-size: 28px; cursor: pointer;
+    background: rgba(255,255,255,0.12); border: none;
+    width: 50px; height: 50px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s; font-family: sans-serif;
+  }
+  .lightbox-prev { left: 20px; }
+  .lightbox-next { right: 20px; }
+  .lightbox-prev:hover, .lightbox-next:hover { background: var(--gold); color: var(--olive-dark); }
+
+  /* ========== PACKAGES ========== */
+  #packages { padding: 90px 20px; background: var(--cream); }
+  .packages-category { margin-bottom: 70px; }
+  .category-header {
+    display: flex; align-items: center; gap: 18px;
+    margin-bottom: 36px; max-width: 1150px; margin-left: auto; margin-right: auto;
+  }
+  .category-header-line { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(201,168,76,0.5), transparent); }
+  .category-header-line.right { background: linear-gradient(270deg, rgba(201,168,76,0.5), transparent); }
+  .category-badge {
+    display: flex; align-items: center; gap: 10px;
+    background: white; border: 2px solid; border-radius: 30px;
+    padding: 10px 22px; white-space: nowrap;
+  }
+  .cat-maternity .category-badge { border-color: var(--lavender); color: var(--lavender); }
+  .cat-newborn .category-badge { border-color: var(--teal); color: var(--teal); }
+  .cat-kids .category-badge { border-color: var(--coral); color: var(--coral); }
+  .category-badge span { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; }
+  .category-badge .cat-icon { font-size: 24px; }
+  .pkg-grid {
+    max-width: 1150px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;
+  }
+  .pkg-card {
+    background: white; border-radius: 20px; overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: all 0.35s; display: flex; flex-direction: column;
+  }
+  .pkg-card:hover { transform: translateY(-6px); box-shadow: 0 18px 50px rgba(0,0,0,0.12); }
+  .pkg-card.popular {
+    border: 2px solid var(--gold);
+    box-shadow: 0 8px 30px var(--shadow-gold);
+    position: relative;
+  }
+  .popular-badge {
+    position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--gold), #E8A840);
+    color: var(--olive-dark); font-size: 11px; font-weight: 700;
+    padding: 5px 18px; border-radius: 0 0 12px 12px;
+    letter-spacing: 0.5px; text-transform: uppercase;
+  }
+  .pkg-img { height: 200px; overflow: hidden; position: relative; }
+  .pkg-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+  .pkg-card:hover .pkg-img img { transform: scale(1.05); }
+  .pkg-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.5));
+  }
+  .pkg-level-tag {
+    position: absolute; bottom: 12px; left: 14px;
+    color: white; font-size: 11px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    background: rgba(0,0,0,0.35); padding: 3px 10px; border-radius: 8px;
+  }
+  .pkg-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+  .pkg-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+  .pkg-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--olive-dark); }
+  .pkg-price { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--gold); }
+  .pkg-price-note { font-size: 11px; color: var(--text-muted); text-align: right; margin-top: 2px; }
+  .pkg-highlight { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; font-style: italic; }
+  .pkg-features { list-style: none; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .pkg-features li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13.5px; color: #444; line-height: 1.4;
+  }
+  .pkg-features li .chk {
+    width: 20px; height: 20px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; flex-shrink: 0; margin-top: 1px;
+  }
+  .cat-maternity .pkg-features li .chk { background: rgba(139,109,168,0.15); color: var(--lavender); }
+  .cat-newborn .pkg-features li .chk { background: rgba(45,125,111,0.15); color: var(--teal); }
+  .cat-kids .pkg-features li .chk { background: rgba(232,115,90,0.15); color: var(--coral); }
+  .pkg-cta {
+    width: 100%; padding: 12px;
+    border-radius: 12px; border: none; cursor: pointer;
+    font-size: 14px; font-weight: 600; font-family: 'DM Sans', sans-serif;
+    margin-top: 20px; transition: all 0.3s;
+    text-decoration: none; display: block; text-align: center;
+  }
+  .cat-maternity .pkg-cta { background: rgba(139,109,168,0.12); color: var(--lavender); }
+  .cat-maternity .pkg-cta:hover { background: var(--lavender); color: white; }
+  .cat-maternity .popular .pkg-cta { background: var(--lavender); color: white; }
+  .cat-newborn .pkg-cta { background: rgba(45,125,111,0.12); color: var(--teal); }
+  .cat-newborn .pkg-cta:hover { background: var(--teal); color: white; }
+  .cat-newborn .popular .pkg-cta { background: var(--teal); color: white; }
+  .cat-kids .pkg-cta { background: rgba(232,115,90,0.12); color: var(--coral); }
+  .cat-kids .pkg-cta:hover { background: var(--coral); color: white; }
+  .cat-kids .popular .pkg-cta { background: var(--coral); color: white; }
+
+  /* ========== BOOKING ========== */
+  #booking { padding: 90px 20px; background: linear-gradient(135deg, var(--olive-dark) 0%, #2A3A1A 100%); position: relative; overflow: hidden; }
+  #booking::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 400px; height: 400px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+  }
+  #booking .section-title { color: white; }
+  #booking .section-label { background: rgba(201,168,76,0.12); color: var(--gold-light); border-color: rgba(201,168,76,0.3); }
+  #booking .section-desc { color: rgba(255,255,255,0.6); }
+  .booking-container {
+    max-width: 750px; margin: 0 auto;
+    background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 24px; padding: 44px 40px;
+    position: relative; z-index: 1;
+  }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-group.full { grid-column: 1 / -1; }
+  .form-group label { font-size: 12.5px; color: rgba(255,255,255,0.7); font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; }
+  .form-group input, .form-group select, .form-group textarea {
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px; padding: 13px 16px;
+    color: white; font-size: 14px; font-family: 'DM Sans', sans-serif;
+    transition: all 0.3s; outline: none;
+  }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.4); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--gold); background: rgba(255,255,255,0.12);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+  }
+  .form-group select option { background: var(--olive-dark); color: white; }
+  .form-group textarea { resize: vertical; min-height: 110px; }
+  .form-submit {
+    width: 100%; padding: 16px;
+    background: linear-gradient(135deg, var(--gold), #E8A840);
+    color: var(--olive-dark); font-size: 15px; font-weight: 700;
+    border: none; border-radius: 14px; cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    box-shadow: 0 6px 25px rgba(201,168,76,0.35);
+    transition: all 0.3s; margin-top: 8px; letter-spacing: 0.5px;
+  }
+  .form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 35px rgba(201,168,76,0.45); }
+  .booking-icons {
+    display: flex; justify-content: center; gap: 30px;
+    margin-bottom: 36px;
+  }
+  .booking-icon-item { text-align: center; color: rgba(255,255,255,0.7); }
+  .booking-icon-item .icon { font-size: 28px; margin-bottom: 8px; display: block; }
+  .booking-icon-item p { font-size: 12px; }
+
+  /* ========== ABOUT ========== */
+  #about { padding: 90px 20px; background: var(--blush); }
+  .about-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+  }
+  .about-img-wrap {
+    position: relative; border-radius: 20px; overflow: hidden;
+    aspect-ratio: 4/5;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  }
+  .about-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .about-img-badge {
+    position: absolute; bottom: 24px; right: -20px;
+    background: white; border-radius: 14px; padding: 16px 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    text-align: center;
+  }
+  .about-img-badge .num { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--gold); }
+  .about-img-badge .txt { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .about-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 30px 0;
+  }
+  .about-stat {
+    background: white; border-radius: 14px; padding: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+  .about-stat .num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--olive-dark); }
+  .about-stat .lbl { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+  .about-text p { font-size: 15px; color: #555; line-height: 1.8; margin-bottom: 16px; }
+  .values-list { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+  .value-tag {
+    padding: 7px 16px; border-radius: 20px; font-size: 13px;
+    background: white; border: 1px solid rgba(201,168,76,0.3);
+    color: var(--olive-dark); font-weight: 500;
+  }
+
+  /* ========== CONTACT ========== */
+  #contact { padding: 90px 20px; background: white; }
+  .contact-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: start;
+  }
+  .contact-info { display: flex; flex-direction: column; gap: 20px; }
+  .contact-info-card {
+    display: flex; align-items: flex-start; gap: 16px;
+    background: var(--gold-pale); border-radius: 16px; padding: 20px 22px;
+    border: 1px solid rgba(201,168,76,0.2);
+  }
+  .contact-info-icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; flex-shrink: 0;
+  }
+  .ci-loc .contact-info-icon { background: rgba(92,107,58,0.12); }
+  .ci-phone .contact-info-icon { background: rgba(82,183,136,0.12); }
+  .ci-email .contact-info-icon { background: rgba(91,155,213,0.12); }
+  .contact-info-text strong { display: block; font-size: 13px; font-weight: 600; color: var(--olive-dark); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .contact-info-text p, .contact-info-text a { font-size: 14px; color: #555; text-decoration: none; line-height: 1.6; }
+  .contact-info-text a:hover { color: var(--gold); }
+  .whatsapp-btn {
+    display: flex; align-items: center; gap: 10px;
+    background: #25D366; color: white;
+    padding: 14px 24px; border-radius: 14px;
+    text-decoration: none; font-weight: 600; font-size: 15px;
+    box-shadow: 0 4px 18px rgba(37,211,102,0.3);
+    transition: all 0.3s; justify-content: center;
+  }
+  .whatsapp-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.4); }
+  .map-container {
+    border-radius: 20px; overflow: hidden;
+    border: 2px solid rgba(201,168,76,0.25);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    height: 350px; background: #E8DFD0;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 14px; text-align: center;
+  }
+  .map-placeholder-icon { font-size: 52px; }
+  .map-placeholder-text { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--olive-dark); font-weight: 600; }
+  .map-placeholder-sub { font-size: 13px; color: var(--text-muted); }
+  .map-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--olive); color: white;
+    padding: 10px 20px; border-radius: 10px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+    transition: background 0.3s;
+  }
+  .map-link:hover { background: var(--olive-dark); }
+
+  /* ========== FOOTER ========== */
+  footer { background: var(--olive-dark); color: rgba(255,255,255,0.75); padding: 50px 20px 24px; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-top {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px;
+  }
+  .footer-brand .studio-name {
+    font-family: 'Playfair Display', serif; font-size: 22px; color: white; margin-bottom: 10px; font-weight: 700;
+  }
+  .footer-brand p { font-size: 13.5px; line-height: 1.7; max-width: 260px; }
+  .footer-social { display: flex; gap: 10px; margin-top: 18px; }
+  .social-btn {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.7); font-size: 16px;
+    text-decoration: none; transition: all 0.3s;
+  }
+  .social-btn:hover { background: var(--gold); color: var(--olive-dark); border-color: var(--gold); }
+  .footer-col h4 { font-size: 13px; font-weight: 600; color: var(--gold-light); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .footer-col ul a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 13.5px; transition: color 0.2s; }
+  .footer-col ul a:hover { color: var(--gold-light); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px; display: flex;
+    justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+    font-size: 12.5px; color: rgba(255,255,255,0.45);
+  }
+  .footer-bottom span { color: var(--gold-light); }
+
+  /* ========== ANIMATIONS ========== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-8px); }
+  }
+  .reveal {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ========== SUCCESS MESSAGE ========== */
+  .success-msg {
+    display: none; background: rgba(82,183,136,0.15);
+    border: 1px solid rgba(82,183,136,0.4);
+    color: var(--mint); border-radius: 12px; padding: 14px;
+    text-align: center; font-size: 14px; margin-top: 14px;
+  }
+  .success-msg.show { display: block; }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 900px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .about-inner { grid-template-columns: 1fr; }
+    .contact-inner { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .booking-container { padding: 28px 20px; }
+    .header-inner { padding: 10px 16px; }
+  }
+  @media (max-width: 620px) {
+    .footer-top { grid-template-columns: 1fr; }
+    nav { gap: 2px; }
+    nav a { font-size: 12px; padding: 6px 10px; }
+    .brand-text .studio-name { font-size: 17px; }
+    .about-img-badge { right: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BANNER -->
+<div class="top-banner">
+  ✨ Welcome to <span>Dreams Capture Studios</span> — Now Accepting Bookings for 2026! 📸
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="studio-brand">
+      <div class="brand-icon">📸</div>
+      <div class="brand-text">
+        <div class="studio-name">Dreams Capture Studios</div>
+        <div class="owner-name">by Basavakiran Biradar • Basavakalyan, Karnataka</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#packages">Packages</a>
+      <a href="#about">About</a>
+      <a href="#booking">Booking</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+919XXXXXXXXX" class="cta-nav">📞 Call Now</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">✦ Professional Photography Studio</div>
+    <h1>Dreams <em>Capture</em><br>Studios</h1>
+    <p class="hero-tagline">"Capturing Your Precious Moments"</p>
+    <p class="hero-desc">Welcome to Dreams Capture Studios — Basavakalyan's premier photography studio where every click tells a story, every frame holds a memory, and every moment becomes timeless art.</p>
+    <div class="hero-services">
+      <span class="service-pill">🤱 Maternity Shoots</span>
+      <span class="service-pill">👶 Newborn Shoots</span>
+      <span class="service-pill">🧒 Kids Shoots</span>
+      <span class="service-pill">💍 Wedding Photography</span>
+      <span class="service-pill">🎉 Event Photography</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#booking" class="btn-primary">📅 Book a Photoshoot</a>
+      <a href="#gallery" class="btn-outline">🖼 View Gallery</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <span class="scroll-arrow">↓</span>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services reveal">
+  <div class="section-header">
+    <div class="section-label">✦ What We Offer</div>
+    <h2 class="section-title">Our <em>Specialties</em></h2>
+    <div class="section-divider"></div>
+    <p class="section-desc">From intimate newborn sessions to grand wedding celebrations, we bring your story to life with artistry and heart.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card c1 reveal">
+      <div class="service-icon">🤱</div>
+      <h3>Maternity Shoots</h3>
+      <p>Celebrate the miracle of life with soft, ethereal maternity portraits that capture the beautiful journey of motherhood.</p>
+    </div>
+    <div class="service-card c2 reveal">
+      <div class="service-icon">👶</div>
+      <h3>Newborn Shoots</h3>
+      <p>Delicate, dreamy sessions capturing your little one's first days — tiny fingers, sleepy smiles, pure innocence.</p>
+    </div>
+    <div class="service-card c3 reveal">
+      <div class="service-icon">🧒</div>
+      <h3>Kids Shoots</h3>
+      <p>Fun, vibrant, and full of personality — we capture your child's unique spirit in playful, creative portraits.</p>
+    </div>
+    <div class="service-card c4 reveal">
+      <div class="service-icon">💍</div>
+      <h3>Wedding Photography</h3>
+      <p>Every love story deserves a stunning visual narrative. We craft timeless wedding memories you'll treasure forever.</p>
+    </div>
+    <div class="service-card c5 reveal">
+      <div class="service-icon">🎉</div>
+      <h3>Event Photography</h3>
+      <p>Birthdays, naming ceremonies, family gatherings — we document every joyful moment with skill and passion.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-header reveal">
+    <div class="section-label">✦ Our Portfolio</div>
+    <h2 class="section-title" style="color:white">Visual <em>Stories</em></h2>
+    <div class="section-divider"></div>
+    <p class="section-desc">A curated collection of moments that took our breath away — and now, yours.</p>
+  </div>
+  <div class="gallery-tabs reveal">
+    <button class="gallery-tab active" onclick="filterGallery('all', this)">All Work</button>
+    <button class="gallery-tab" onclick="filterGallery('maternity', this)">Maternity</button>
+    <button class="gallery-tab" onclick="filterGallery('newborn', this)">Newborn</button>
+    <button class="gallery-tab" onclick="filterGallery('kids', this)">Kids</button>
+    <button class="gallery-tab" onclick="filterGallery('wedding', this)">Wedding</button>
+    <button class="gallery-tab" onclick="filterGallery('events', this)">Events</button>
+  </div>
+  <div class="gallery-grid reveal" id="galleryGrid"></div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <div class="section-header reveal">
+    <div class="section-label">✦ Pricing & Packages</div>
+    <h2 class="section-title">Choose Your <em>Perfect</em> Package</h2>
+    <div class="section-divider"></div>
+    <p class="section-desc">Transparent pricing with no hidden costs. Choose the package that best suits your vision.</p>
+  </div>
+
+  <!-- MATERNITY -->
+  <div class="packages-category cat-maternity reveal">
+    <div class="category-header">
+      <div class="category-header-line"></div>
+      <div class="category-badge">
+        <span class="cat-icon">🤱</span>
+        <span>Maternity Shoot Packages</span>
+      </div>
+      <div class="category-header-line right"></div>
+    </div>
+    <div class="pkg-grid">
+      <div class="pkg-card">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=70" alt="Maternity Basic">
+          <div class="pkg-img-overlay"></div>
+          <div class="pkg-level-tag">BASIC</div>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-header"><span class="pkg-name">Basic</span><div><div class="pkg-price">₹2,499</div><div class="pkg-price-note">Starting price</div></div></div>
+          <p class="pkg-highlight">Perfect for a memorable introduction to your journey</p>
+          <ul class="pkg-features">
+            <li><span class="chk">✓</span> 30 Minutes Session</li>
+            <li><span class="chk">✓</span> 1 Theme</li>
+            <li><span class="chk">✓</span> 1 Outfit</li>
+            <li><span class="chk">✓</span> 6 Edited Photos</li>
+            <li><span class="chk">✓</span> 4 Prints (6×8 inches)</li>
+          </ul>
+          <a href="#booking" class="pkg-cta">Book This Package</a>
+        </div>
+      </div>
+      <div class="pkg-card popular">
+        <div class="popular-badge">⭐ Most Popular</div>
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1490717064229-6cf2a50bed13?w=500&auto=format&fit=crop&q=70" alt="Maternity Regular">
+          <div class="pkg-img-overlay"></div>
+          <div class="pkg-level-tag">REGULAR</div>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-header"><span class="pkg-name">Regular</span><div><div class="pkg-price">₹5,499</div><div class="pkg-price-note">Best value</div></div></div>
+          <p class="pkg-highlight">A comprehensive experience with multiple beautiful themes</p>
+          <ul class="pkg-features">
+            <li><span class="chk">✓</span> 60 Minutes Session</li>
+            <li><span class="chk">✓</span> 3 Themes</li>
+            <li><span class="chk">✓</span> 3 Outfits</li>
+            <li><span class="chk">✓</span> 15 Edited Photos</li>
+            <li><span class="chk">✓</span> 10 Prints (6×8 inches)</li>
+          </ul>
+          <a href="#booking" class="pkg-cta">Book This Package</a>
+        </div>
+      </div>
+      <div class="pkg-card">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=500&auto=format&fit=crop&q=70" alt="Maternity Standard">
+          <div class="pkg-img-overlay"></div>
+          <div class="pkg-level-tag">STANDARD</div>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-header"><span class="pkg-name">Standard</span><div><div class="pkg-price">₹7,999</div><div class="pkg-price-note">Premium experience</div></div></div>
+          <p class="pkg-highlight">The ultimate luxury maternity experience</p>
+          <ul class="pkg-features">
+            <li><span class="chk">✓</span> 90 Minutes Session</li>
+            <li><span class="chk">✓</span> 5 Themes</li>
+            <li><span class="chk">✓</span> 5 Outfits</li>
+            <li><span class="chk">✓</span> 30 Edited Photos</li>
+            <li><span class="chk">✓</span> 12 Prints (6×8 inches)</li>
+            <li><span class="chk">✓</span> 8×12 inch Photo Frame</li>
+            <li><span class="chk">✓</span> Mini Folio Album 6×8</li>
+            <li><span class="chk">✓</span> Mobile Cinematic Reel</li>
+            <li><span class="chk">✓</span> All Non-Edit Photos Drive Link</li>
+          </ul>
+          <a href="#booking" class="pkg-cta">Book This Package</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWBORN -->
+  <div class="packages-category cat-newborn reveal">
+    <div class="category-header">
+      <div class="category-header-line"></div>
+      <div class="category-badge">
+        <span class="cat-icon">👶</span>
+        <span>Newborn Shoot Packages</span>
+      </div>
+      <div class="category-header-line right"></div>
+    </div>
+    <div class="pkg-grid">
+      <div class="pkg-card">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=500&auto=format&fit=crop&q=70" alt="Newborn Basic">
+          <div class="pkg-img-overlay"></div>
+          <div class="pkg-level-tag">BASIC</div>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-header"><span class="pkg-name">Basic</span><div><div class="pkg-price">₹2,499</div><div class="pkg-price-note">Starting price</div></div></div>
+          <p class="pkg-highlight">Gentle introduction to your newborn's first portraits</p>
+          <ul class="pkg-features">
+            <li><span class="chk">✓</span> 30 Minutes Session</li>
+            <li><span class="chk">✓</span> 2 Themes</li>
+            <li><span class="chk">✓</span> 2 Outfits (1 Wrap)</li>
+            <li><span class="chk">✓</span> 6 Edited Photos</li>
+            <li><span class="chk">✓</span> 4 Prints (6×8 inches)</li>
+          </ul>
+          <a href="#booking" class="pkg-cta">Book This Package</a>
+        </div>
+      </div>
+      <div class="pkg-card popular">
+        <div class="popular-badge">⭐ Most Popular</div>
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500&auto=format&fit=crop&q=70" alt="Newborn Regular">
+          <div class="pkg-img-overlay"></div>
+          <div class="pkg-level-tag">REGULAR</div>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-header"><span class="pkg-name">Regular</span><div><div class="pkg-price">₹5,499</div><div class="pkg-price-note">Best value</div></div></div>
+          <p class="pkg-highlight">Rich variety of themes for those tiny magical moments</p>
+          <ul class="pkg-features">
+            <li><span class="chk">✓</span> 60 Minutes Session</li>
+            <li><span class="chk">✓</span> 4 Themes</li>
+            <li><span class="chk">✓</span> 4 Outfits</li>
+            <li><span class="chk">✓</span> 15 Edited Photos</li>
+            <li><span class="chk">✓</span> 8 Prints (6×8 inches)</li>
+          </ul>
+          <a href="#booking" class="pkg-cta">Book This Package</a>
+        </div>
+      </div>
+      <div class="pkg-card">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?w=500&auto=format&fit=crop&q=70" alt="Newborn Standard">
+          <div class="pkg-img-overlay"></div>
+          <div class="pkg-level-tag">STANDARD</div>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-header"><span class="pkg-name">Standard</span><div><div class="pkg-price">₹7,999</div><div class="pkg-price-note">Premium experience</div></div></div>
+          <p class="pkg-highlight">Complete family experience including a family theme</p>
+          <ul class="pkg-features">
+            <li><span class="chk">✓</span> 90 Minutes Session</li>
+            <li><span class="chk">✓</span> 6 Themes (1 Family Theme)</li>
+            <li><span class="chk">✓</span> 5 Outfits</li>
+            <li><span class="chk">✓</span> 30 Edited Photos</li>
+            <li><span class="chk">✓</span> 12 Prints (6×8 inches)</li>
+            <li><span class="chk">✓</span> 8×12 inch Photo Frame</li>
+            <li><span class="chk">✓</span> Mini Folio Album 6×8</li>
+            <li><span class="chk">✓</span> Mobile Cinematic Reel</li>
+            <li><span class="chk">✓</span> All Non-Edit Photos Drive Link</li>
+          </ul>
+          <a href="#booking" class="pkg-cta">Book This Package</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KIDS -->
+  <div class="packages-category cat-kids reveal">
+    <div class="category-header">
+      <div class="category-header-line"></div>
+      <div class="category-badge">
+        <span class="cat-icon">🧒</span>
+        <span>Kids Shoot Packages</span>
+      </div>
+      <div class="category-header-line right"></div>
+    </div>
+    <div class="pkg-grid">
+      <div class="pkg-card">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?w=500&auto=format&fit=crop&q=70" alt="Kids Basic">
+          <div class="pkg-img-overlay"></div>
+          <div class="pkg-level-tag">BASIC</div>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-header"><span class="pkg-name">Basic</span><div><div class="pkg-price">₹2,499</div><div class="pkg-price-note">Starting price</div></div></div>
+          <p class="pkg-highlight">A fun, playful session for your little star</p>
+          <ul class="pkg-features">
+            <li><span class="chk">✓</span> 30 Minutes Session</li>
+            <li><span class="chk">✓</span> 2 Themes</li>
+            <li><span class="chk">✓</span> 2 Outfits</li>
+            <li><span class="chk">✓</span> 6 Edited Photos</li>
+            <li><span class="chk">✓</span> 4 Prints (6×8 inches)</li>
+          </ul>
+          <a href="#booking" class="pkg-cta">Book This Package</a>
+        </div>
+      </div>
+      <div class="pkg-card popular">
+        <div class="popular-badge">⭐ Most Popular</div>
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1543702260-43e0e7069020?w=500&auto=format&fit=crop&q=70" alt="Kids Regular">
+          <div class="pkg-img-overlay"></div>
+          <div class="pkg-level-tag">REGULAR</div>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-header"><span class="pkg-name">Regular</span><div><div class="pkg-price">₹5,499</div><div class="pkg-price-note">Best value</div></div></div>
+          <p class="pkg-highlight">Multiple themes to capture every side of your child</p>
+          <ul class="pkg-features">
+            <li><span class="chk">✓</span> 60 Minutes Session</li>
+            <li><span class="chk">✓</span> 4 Themes</li>
+            <li><span class="chk">✓</span> 4 Outfits</li>
+            <li><span class="chk">✓</span> 15 Edited Photos</li>
+            <li><span class="chk">✓</span> 8 Prints (6×8 inches)</li>
+          </ul>
+          <a href="#booking" class="pkg-cta">Book This Package</a>
+        </div>
+      </div>
+      <div class="pkg-card">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1484665754804-74b091211472?w=500&auto=format&fit=crop&q=70" alt="Kids Standard">
+          <div class="pkg-img-overlay"></div>
+          <div class="pkg-level-tag">STANDARD</div>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-header"><span class="pkg-name">Standard</span><div><div class="pkg-price">₹7,999</div><div class="pkg-price-note">Premium experience</div></div></div>
+          <p class="pkg-highlight">The ultimate kids shoot with family memories included</p>
+          <ul class="pkg-features">
+            <li><span class="chk">✓</span> 90 Minutes Session</li>
+            <li><span class="chk">✓</span> 6 Themes (1 Family Theme)</li>
+            <li><span class="chk">✓</span> 5 Outfits</li>
+            <li><span class="chk">✓</span> 30 Edited Photos</li>
+            <li><span class="chk">✓</span> 12 Prints (6×8 inches)</li>
+            <li><span class="chk">✓</span> 8×12 inch Photo Frame</li>
+            <li><span class="chk">✓</span> Mini Folio Album 6×8</li>
+            <li><span class="chk">✓</span> Mobile Cinematic Reel</li>
+            <li><span class="chk">✓</span> All Non-Edit Photos Drive Link</li>
+          </ul>
+          <a href="#booking" class="pkg-cta">Book This Package</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="section-header reveal">
+    <div class="section-label">✦ Book a Session</div>
+    <h2 class="section-title" style="color:white">Reserve Your <em>Shoot</em></h2>
+    <div class="section-divider"></div>
+    <p class="section-desc" style="color:rgba(255,255,255,0.6)">Fill in the details below and we'll confirm your booking within 24 hours.</p>
+  </div>
+  <div class="booking-icons reveal">
+    <div class="booking-icon-item"><span class="icon">📅</span><p>Flexible Dates</p></div>
+    <div class="booking-icon-item"><span class="icon">✅</span><p>Instant Confirmation</p></div>
+    <div class="booking-icon-item"><span class="icon">🎨</span><p>Custom Themes</p></div>
+    <div class="booking-icon-item"><span class="icon">📦</span><p>All Packages</p></div>
+  </div>
+  <div class="booking-container reveal">
+    <form id="bookingForm" onsubmit="handleBooking(event)">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label>Preferred Date *</label>
+          <input type="date" required>
+        </div>
+        <div class="form-group">
+          <label>Shoot Type *</label>
+          <select required>
+            <option value="">Select shoot type</option>
+            <option>Maternity Shoot</option>
+            <option>Newborn Shoot</option>
+            <option>Kids Shoot</option>
+            <option>Wedding Photography</option>
+            <option>Event Photography</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Package *</label>
+          <select required>
+            <option value="">Select package</option>
+            <option>Basic — ₹2,499</option>
+            <option>Regular — ₹5,499</option>
+            <option>Standard — ₹7,999</option>
+            <option>Custom / Wedding</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>Additional Message</label>
+          <textarea placeholder="Tell us about your vision, special requests, or any questions you have..."></textarea>
+        </div>
+      </div>
+      <button type="submit" class="form-submit">📅 Confirm My Booking</button>
+      <div class="success-msg" id="successMsg">🎉 Thank you! Your booking request has been sent. We'll contact you within 24 hours to confirm.</div>
+    </form>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header reveal">
+    <div class="section-label">✦ Our Story</div>
+    <h2 class="section-title">Meet the <em>Artist</em></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="about-inner reveal">
+    <div class="about-img-wrap">
+      <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=600&auto=format&fit=crop&q=80" alt="Basavakiran Biradar — Photographer">
+      <div class="about-img-badge">
+        <div class="num">5+</div>
+        <div class="txt">Years of<br>Excellence</div>
+      </div>
+    </div>
+    <div class="about-text">
+      <p>Hello! I'm <strong>Basavakiran Biradar</strong>, the founder and lead photographer of <strong>Dreams Capture Studios</strong>, based in the heart of Basavakalyan, Karnataka.</p>
+      <p>My journey with photography began as a childhood fascination with light, shadow, and the stories that moments hold. Over the years, that passion transformed into a calling — to preserve life's most precious milestones through the art of photography.</p>
+      <p>I specialize in the delicate art of maternity, newborn, and children's photography, where patience, creativity, and a gentle touch are everything. Every session at Dreams Capture Studios is crafted with meticulous attention to detail — from the soft props and custom backdrops to the careful post-processing that gives each image a timeless, gallery-quality finish.</p>
+      <div class="values-list">
+        <span class="value-tag">🎨 Artistic Vision</span>
+        <span class="value-tag">❤️ Genuine Care</span>
+        <span class="value-tag">✨ Attention to Detail</span>
+        <span class="value-tag">📸 Technical Excellence</span>
+        <span class="value-tag">🌟 Memorable Experiences</span>
+      </div>
+      <div class="about-stats">
+        <div class="about-stat"><div class="num">500+</div><div class="lbl">Happy Families</div></div>
+        <div class="about-stat"><div class="num">2000+</div><div class="lbl">Photos Delivered</div></div>
+        <div class="about-stat"><div class="num">5+</div><div class="lbl">Years Experience</div></div>
+        <div class="about-stat"><div class="num">100%</div><div class="lbl">Satisfaction Rate</div></div>
+      </div>
+      <p>My vision is simple: to create a warm, comfortable environment where families feel at ease, resulting in genuine, authentic images that will be cherished for generations. <em>Dreams Capture Studios is not just a studio — it's where your family's story is told beautifully.</em></p>
+      <a href="#booking" class="btn-primary" style="display:inline-block;margin-top:10px;color:var(--olive-dark)">Book a Session →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header reveal">
+    <div class="section-label">✦ Get in Touch</div>
+    <h2 class="section-title">Visit or <em>Contact</em> Us</h2>
+    <div class="section-divider"></div>
+    <p class="section-desc">We'd love to hear from you! Reach out to book a session or simply ask any questions.</p>
+  </div>
+  <div class="contact-inner reveal">
+    <div class="contact-info">
+      <div class="contact-info-card ci-loc">
+        <div class="contact-info-icon">📍</div>
+        <div class="contact-info-text">
+          <strong>Studio Address</strong>
+          <p>Dreams Capture Studios<br>Basavakalyan — 585327<br>Bidar, Karnataka, India</p>
+        </div>
+      </div>
+      <div class="contact-info-card ci-phone">
+        <div class="contact-info-icon">📞</div>
+        <div class="contact-info-text">
+          <strong>Phone / WhatsApp</strong>
+          <a href="tel:+919980402120">+91 9980402120</a><br>
+          <!-- <a href="tel:+919980402120">+91 9XXXXXXXXX</a> -->
+        </div>
+      </div>
+      <div class="contact-info-card ci-email">
+        <div class="contact-info-icon">📧</div>
+        <div class="contact-info-text">
+          <strong>Email Address</strong>
+          <a href="mailto:dreamscapturestudios@gmail.com">dreamscapturestudios@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-info-card ci-phone">
+        <div class="contact-info-icon">🕐</div>
+        <div class="contact-info-text">
+          <strong>Studio Hours</strong>
+          <p>Monday – Sunday: 9:00 AM – 7:00 PM</p>
+        </div>
+      </div>
+      <a href="https://wa.me/919980402120?text=Hello%20Dreams%20Capture%20Studios%2C%20I%20would%20like%20to%20book%20a%20photoshoot!" target="_blank" class="whatsapp-btn">
+    <span style="font-size:20px">💬</span> Chat on WhatsApp
+</a>
+    </div>
+    <div>
+      <div class="map-container">
+        <div class="map-placeholder-icon">🗺️</div>
+        <div class="map-placeholder-text">Dreams Capture Studios</div>
+        <div class="map-placeholder-sub">Basavakalyan — 585327, Bidar, Karnataka</div>
+        <a href="https://maps.app.goo.gl/1edGPT4771zD9TyV7" target="_blank" class="map-link">
+          📍 Open in Google Maps
+        </a>
+      </div>
+      <div style="margin-top:24px; background:var(--gold-pale); border-radius:16px; padding:24px; border:1px solid rgba(201,168,76,0.2);">
+        <h3 style="font-family:'Playfair Display',serif; color:var(--olive-dark); margin-bottom:14px; font-size:18px;">Why Choose Us?</h3>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:#555"><span style="font-size:18px">🎨</span> Custom-designed studio sets & props</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:#555"><span style="font-size:18px">📸</span> Professional-grade camera equipment</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:#555"><span style="font-size:18px">✨</span> Expert photo editing & retouching</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:#555"><span style="font-size:18px">🤝</span> Warm, family-friendly environment</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:#555"><span style="font-size:18px">⚡</span> Fast delivery — within 7–10 working days</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="studio-name">📸 Dreams Capture Studios</div>
+        <p>Capturing your precious moments with artistry, warmth, and technical excellence. Based in Basavakalyan, serving all of Karnataka.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">📘</a>
+          <a href="#" class="social-btn">📷</a>
+          <a href="#" class="social-btn">▶️</a>
+          <a href="#" class="social-btn">💬</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#booking">Book Now</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#packages">Maternity Shoots</a></li>
+          <li><a href="#packages">Newborn Shoots</a></li>
+          <li><a href="#packages">Kids Shoots</a></li>
+          <li><a href="#packages">Wedding Photography</a></li>
+          <li><a href="#packages">Event Photography</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Packages</h4>
+        <ul>
+          <li><a href="#packages">Basic — ₹2,499</a></li>
+          <li><a href="#packages">Regular — ₹5,499</a></li>
+          <li><a href="#packages">Standard — ₹7,999</a></li>
+          <li><a href="#booking">Custom Packages</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 <span>Dreams Capture Studios</span> — All Rights Reserved</span>
+      <span>Made with ❤️ by <span>Basavakiran Biradar</span> | Basavakalyan, Karnataka</span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-prev" onclick="changeLightboxImg(-1);event.stopPropagation()">‹</button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-next" onclick="changeLightboxImg(1);event.stopPropagation()">›</button>
+</div>
+
+<script>
+const galleryData = [
+  { src: 'https://images.unsplash.com/photo-1490717064229-6cf2a50bed13?w=600&auto=format&fit=crop&q=75', cat: 'maternity', label: 'Golden Hour Maternity' },
+  { src: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&auto=format&fit=crop&q=75', cat: 'maternity', label: 'Soft Bloom Session' },
+  { src: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&auto=format&fit=crop&q=75', cat: 'maternity', label: 'Garden Dreams' },
+  { src: 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=600&auto=format&fit=crop&q=75', cat: 'newborn', label: 'Tiny Toes' },
+  { src: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&auto=format&fit=crop&q=75', cat: 'newborn', label: 'Sweet Dreams' },
+  { src: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=600&auto=format&fit=crop&q=75', cat: 'newborn', label: 'Family Bliss' },
+  { src: 'https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?w=600&auto=format&fit=crop&q=75', cat: 'kids', label: 'Rainbow Joy' },
+  { src: 'https://images.unsplash.com/photo-1543702260-43e0e7069020?w=600&auto=format&fit=crop&q=75', cat: 'kids', label: 'Little Explorer' },
+  { src: 'https://images.unsplash.com/photo-1484665754804-74b091211472?w=600&auto=format&fit=crop&q=75', cat: 'kids', label: 'Playful Spirit' },
+  { src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&auto=format&fit=crop&q=75', cat: 'wedding', label: 'Forever Begins' },
+  { src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&auto=format&fit=crop&q=75', cat: 'wedding', label: 'Golden Union' },
+  { src: 'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=600&auto=format&fit=crop&q=75', cat: 'events', label: 'Grand Celebration' },
+];
+
+let currentFilter = 'all';
+let filteredImgs = [];
+let currentLbIdx = 0;
+
+function renderGallery(filter) {
+  const grid = document.getElementById('galleryGrid');
+  filteredImgs = filter === 'all' ? galleryData : galleryData.filter(i => i.cat === filter);
+  grid.innerHTML = filteredImgs.map((item, idx) => `
+    <div class="gallery-item" onclick="openLightbox(${idx})" data-cat="${item.cat}">
+      <img src="${item.src}" alt="${item.label}" loading="lazy">
+      <div class="gallery-overlay">
+        <div>
+          <div class="gallery-category-tag">${item.cat}</div>
+          <div class="gallery-label">${item.label}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterGallery(cat, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  renderGallery(cat);
+}
+
+function openLightbox(idx) {
+  currentLbIdx = idx;
+  document.getElementById('lightboxImg').src = filteredImgs[idx].src;
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(e) {
+  if (!e || e.target === document.getElementById('lightbox') || e.currentTarget === document.querySelector('.lightbox-close')) {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+function changeLightboxImg(dir) {
+  currentLbIdx = (currentLbIdx + dir + filteredImgs.length) % filteredImgs.length;
+  document.getElementById('lightboxImg').src = filteredImgs[currentLbIdx].src;
+}
+
+function handleBooking(e) {
+  e.preventDefault();
+  const msg = document.getElementById('successMsg');
+  msg.classList.add('show');
+  e.target.reset();
+  setTimeout(() => msg.classList.remove('show'), 5000);
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Keyboard lightbox
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('active')) return;
+  if (e.key === 'ArrowLeft') changeLightboxImg(-1);
+  if (e.key === 'ArrowRight') changeLightboxImg(1);
+  if (e.key === 'Escape') closeLightbox({target: document.getElementById('lightbox')});
+});
+
+renderGallery('all');
+</script>
+</body>
+</html>
